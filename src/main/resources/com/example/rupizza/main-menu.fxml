@@ -1,10 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="428.0" prefWidth="534.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.rupizza.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-  </padding>
-</VBox>
+<GridPane alignment="CENTER" prefHeight="333.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainMenuController">
+
+    <Label style="-fx-font-size: 18;" text="RU Pizza" translateX="85.0" translateY="-15.0" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0" />
+
+    <Button onAction="#orderSpecialtyPizzas" translateX="-10.0" translateY="-10.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <graphic>
+            <VBox>
+                <ImageView fitHeight="100" fitWidth="100">
+                    <image>
+                        <Image url="https://www.allrecipes.com/thmb/fFW1o307WSqFFYQ3-QXYVpnFj6E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/48727-Mikes-homemade-pizza-DDMFS-beauty-4x3-BG-2974-a7a9842c14e34ca699f3b7d7143256cf.jpg" />
+                    </image>
+                </ImageView>
+                <Label text="Specialty Pizzas" />
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button onAction="#BuildYourOwn" translateX="10.0" translateY="-10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <graphic>
+            <VBox>
+                <ImageView fitHeight="100" fitWidth="100">
+                    <image>
+                        <Image url="https://mutti-parma.com/app/uploads/sites/30/2020/12/b9111937-da9e-4b7c-9d60-a48897d5323a-makeyourownpizzanight.jpg" />
+                    </image>
+                </ImageView>
+                <Label text="Build Your Own" />
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button onAction="#CurrentOrder" translateX="-10.0" translateY="10.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <graphic>
+            <VBox>
+                <ImageView fitHeight="100" fitWidth="100">
+                    <image>
+                        <Image url="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/shopping_cart.png" />
+                    </image>
+                </ImageView>
+                <Label text="Current Order" />
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button onAction="#StoreOrders" translateX="10.0" translateY="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <graphic>
+            <VBox>
+                <ImageView fitHeight="100" fitWidth="100">
+                    <image>
+                        <Image url="https://cdn-icons-png.flaticon.com/512/8221/8221580.png" />
+                    </image>
+                </ImageView>
+                <Label text="Store Orders" />
+            </VBox>
+        </graphic>
+    </Button>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+
+</GridPane>
