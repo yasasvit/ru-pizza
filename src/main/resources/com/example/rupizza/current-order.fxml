@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.rupizza.CurrentOrder"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox alignment="CENTER" prefHeight="440.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.CurrentOrderController">
 
-</AnchorPane>
+    <Label style="-fx-font-size: 24;" text="Pizza Order" translateY="-30.0" />
+
+    <HBox>
+        <Label text="Order Number" translateX="10.0" translateY="-20.0" />
+        <TextField fx:id="orderNumberTextField" editable="false" translateX="15.0" translateY="-20.0" />
+    </HBox>
+
+    <Label text="Order Information" />
+    <ScrollPane prefHeight="150" prefWidth="500">
+        <content>
+            <TextArea fx:id="orderInfoTextArea" editable="true" wrapText="true" />
+        </content>
+    </ScrollPane>
+
+    <HBox spacing="10">
+        <VBox>
+            <Label text="Subtotal $" translateX="20.0" translateY="10.0" />
+            <TextField fx:id="subtotalTextField" editable="false" translateX="20.0" translateY="10.0" />
+        </VBox>
+
+        <VBox>
+            <Label text="Sales Tax $" translateX="25.0" translateY="10.0" />
+            <TextField fx:id="salesTaxTextField" editable="false" translateX="25.0" translateY="10.0" />
+        </VBox>
+
+        <VBox prefHeight="57.0" prefWidth="105.0" spacing="5" translateX="10.0">
+            <Button onAction="#removePizza" text="Remove Pizza" translateX="60.0" translateY="10.0" />
+            <Button onAction="#placeOrder" prefHeight="26.0" prefWidth="94.0" text="Place Order" translateX="60.0" translateY="30.0" />
+        </VBox>
+    </HBox>
+
+    <HBox prefHeight="66.0" prefWidth="544.0" translateY="20.0">
+        <VBox>
+            <Label text="Order Total $" translateX="20.0" />
+            <TextField fx:id="orderTotalTextField" editable="false" translateX="20.0" />
+        </VBox>
+    </HBox>
+
+</VBox>
