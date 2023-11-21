@@ -4,7 +4,10 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
+
+
 <GridPane alignment="CENTER" prefHeight="333.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainMenuController">
+
 
     <Label style="-fx-font-size: 18;" text="RU Pizza" translateX="85.0" translateY="-15.0" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0" />
 
