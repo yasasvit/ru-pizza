@@ -1,47 +1,50 @@
 package com.example.demo;
 
-import javafx.fxml.FXML;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainMenuController {
+public class MainMenuController extends Application {
 
-    @FXML
-    private void orderSpecialtyPizzas() {
-        // Code to handle ordering specialty pizzas
+    public void orderSpecialtyPizzas(javafx.event.ActionEvent actionEvent) {
+        
+    }
+    public void BuildYourOwn(ActionEvent actionEvent) {
+        
+    }
+    public void StoreOrders(ActionEvent actionEvent) {
+        
+    }
+    public void CurrentOrder(ActionEvent actionEvent) {
+        
     }
 
-    @FXML
-    private void BuildYourOwn() {
-        // Code to handle ordering build your own pizza
+    public static void main(String[] args) {
+        launch(args);
     }
 
-    @FXML
-    private void CurrentOrder() {
-        // Code to handle browsing the current order
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        showMainMenu(primaryStage);
     }
-    @FXML
-    private void showCurrentOrder() {
+
+    public void showMainMenu(Stage stage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com.example.demo/CurrentOrder.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/demo/MainMenu.fxml"));
             Parent root = loader.load();
 
-            Stage stage = new Stage();
-            stage.setTitle("Current Order");
-            stage.setScene(new Scene(root));
+            stage.setTitle("Build Your Own Pizza App");
+            stage.setScene(new Scene(root, 600, 400));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    @FXML
-    private void StoreOrders() {
-        // Code to handle browsing store orders
-    }
+    
 }
