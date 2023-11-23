@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-
-
-<GridPane alignment="CENTER" prefHeight="333.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainMenuController">
+<GridPane alignment="CENTER" prefHeight="333.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
 
 
     <Label style="-fx-font-size: 18;" text="RU Pizza" translateX="85.0" translateY="-15.0" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0" />
 
-    <Button onAction="#orderSpecialtyPizzas" translateX="-10.0" translateY="-10.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+    <Button translateX="-10.0" translateY="-10.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
         <graphic>
             <VBox>
                 <ImageView fitHeight="100" fitWidth="100">
@@ -24,7 +27,7 @@
         </graphic>
     </Button>
 
-    <Button onAction="#BuildYourOwn" translateX="10.0" translateY="-10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+    <Button translateX="10.0" translateY="-10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
         <graphic>
             <VBox>
                 <ImageView fitHeight="100" fitWidth="100">
@@ -37,7 +40,7 @@
         </graphic>
     </Button>
 
-    <Button onAction="#CurrentOrder" translateX="-10.0" translateY="10.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+    <Button translateX="-10.0" translateY="10.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
         <graphic>
             <VBox>
                 <ImageView fitHeight="100" fitWidth="100">
@@ -50,7 +53,7 @@
         </graphic>
     </Button>
 
-    <Button onAction="#StoreOrders" translateX="10.0" translateY="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+    <Button translateX="10.0" translateY="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
         <graphic>
             <VBox>
                 <ImageView fitHeight="100" fitWidth="100">
