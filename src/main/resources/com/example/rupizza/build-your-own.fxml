@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="543.0" prefWidth="543.0" spacing="10" style="-fx-margin: 10;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" prefHeight="543.0" prefWidth="543.0" spacing="10" style="-fx-margin: 10;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.BuildYourOwnController">
 
     <Label style="-fx-font-size: 24;" text="Build Your Own Pizza" translateY="-15.0" />
 
@@ -17,11 +17,8 @@
                 </image>
             </ImageView>
 
-            <Label text="Additional Toppings" translateY="25.0" />
-            <ScrollPane prefHeight="60" prefWidth="150" translateY="15.0">
-                <TextArea fx:id="additionalToppingsTextArea" prefHeight="109.0" prefWidth="247.0" wrapText="true" />
-            </ScrollPane>
-
+            <Label text="Additional Toppings" translateY="30.0" />
+            <ListView fx:id="additionalToppingsListView" prefHeight="58.0" prefWidth="231.0" translateY="20.0" />
             <Button text="Add Topping" translateX="70.0" translateY="15.0" />
 
             <Label text="Price $" translateX="5.0" translateY="40.0" />
@@ -45,18 +42,15 @@
             <CheckBox text="Extra Cheese" translateX="25.0" translateY="10.0" />
 
             <VBox style="-fx-margin: 10; margin-top: 20;">
-                <Label text="Selected Toppings" translateY="15.0" />
-                <ScrollPane prefHeight="57.0" prefWidth="199.0" translateY="15.0">
-                    <TextArea fx:id="selectedToppingsTextArea" prefHeight="96.0" prefWidth="246.0" wrapText="true" />
-                </ScrollPane>
-
+                <Label text="Selected Toppings" translateY="20.0" />
+                <ListView fx:id="selectedToppingsListView" prefHeight="60.0" prefWidth="232.0" translateY="21.0" />
                 <Button text="Remove Topping" translateX="60.0" translateY="25.0" />
             </VBox>
 
             <Button layoutX="1.0" layoutY="1.0" prefHeight="26.0" prefWidth="109.0" text="Add to Order" translateX="60.0" translateY="45.0" wrapText="true">
-            <VBox.margin>
-               <Insets left="1.0" top="1.0" />
-            </VBox.margin></Button>
+                <VBox.margin>
+                    <Insets left="1.0" top="1.0" />
+                </VBox.margin></Button>
         </VBox>
     </HBox>
 </VBox>
