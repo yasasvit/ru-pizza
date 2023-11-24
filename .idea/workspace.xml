@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96284d5d-7433-4e5e-88ef-8831533c2c76" name="Changes" comment="">
+    <list default="true" id="96284d5d-7433-4e5e-88ef-8831533c2c76" name="Changes" comment="update">
       <change afterPath="$PROJECT_DIR$/../.localized" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../IMG_0707 2.HEIC" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../IMG_0746.jpg" afterDir="false" />
@@ -71,22 +71,29 @@
       <change afterPath="$PROJECT_DIR$/../projects/movie-recommendation-system" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../projects/vacation-haven" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ru-bank" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/MainMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/BuildYourOwnController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/CurrentOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/PizzaOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/SpecialtyPizzasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/StoreOrderController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/BuildYourOwnController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/CurrentOrderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/MainMenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/SpecialtyPizzaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/StoreOrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/build-your-own.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/build-your-own.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/current-order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/current-order.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/main-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/main-menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/specialty-pizzas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/specialty-pizzas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/store-order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/store-order.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="repository" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -109,17 +116,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/rupizza" />
@@ -164,8 +171,27 @@
       <option name="project" value="LOCAL" />
       <updated>1700442830202</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1700701546491</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700701546491</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />

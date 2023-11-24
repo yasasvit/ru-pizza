@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="543.0" prefWidth="543.0" spacing="10" style="-fx-margin: 10;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.BuildYourOwnController">
+<VBox alignment="CENTER" prefHeight="543.0" prefWidth="543.0" spacing="10" style="-fx-margin: 10;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
 
     <Label style="-fx-font-size: 24;" text="Build Your Own Pizza" translateY="-15.0" />
 
