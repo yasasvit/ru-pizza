@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
@@ -15,26 +19,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="465.0" prefWidth="364.0" spacing="15" style="-fx-margin: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rupizza.SpecialtyPizzasController">
+<VBox alignment="CENTER" prefHeight="465.0" prefWidth="364.0" spacing="15" style="-fx-margin: 10;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rupizza.SpecialtyPizzasController">
 
     <Label style="-fx-font-size: 24;" text="Order Specialty Pizza" translateY="15.0" />
 
     <HBox spacing="15" style="-fx-margin: 10;">
         <VBox style="-fx-margin: 10;">
 
-            <VBox spacing="5" style="-fx-margin: 10;">
-                <Label text="Ingredients" translateX="25.0" translateY="175.0" />
-                <ScrollPane prefHeight="60" prefWidth="140" style="-fx-margin: 10;" translateX="25.0" translateY="170.0">
-                    <TextArea fx:id="toppingsTextArea" editable="false" prefHeight="177.0" prefWidth="134.0" wrapText="false">
-                  <font>
-                     <Font size="10.0" />
-                  </font></TextArea>
+            <VBox prefWidth="100.0" spacing="5" style="-fx-margin: 10;" translateX="25.0" translateY="175.0">
+                <Label text="Toppings" translateX="5.0" translateY="20.0" />
+                <ScrollPane prefHeight="79.0" prefWidth="140" style="-fx-margin: 10;" translateX="5.0" translateY="20.0">
+                    <ListView fx:id="toppingsListView" prefHeight="57.0" prefWidth="134.0" translateX="-25.0" translateY="-175.0">
+                        <Font size="10.0" />
+                    </ListView>
                 </ScrollPane>
             </VBox>
 
-            <VBox style="-fx-margin: 10;">
-                <Label text="Price $" translateX="30.0" translateY="200.0" />
-                <TextField fx:id="priceTextField" prefWidth="140" translateX="30.0" translateY="200.0" />
+
+
+            <VBox style="-fx-margin: 10;" translateX="30.0" translateY="225.0">
+                <Label text="Price $" />
+                <TextField fx:id="priceTextField" prefWidth="140" />
             </VBox>
         </VBox>
 
@@ -47,27 +52,32 @@
 
             <Label text="Select Size:" />
             <RadioButton fx:id="smallRadioButton" onAction="#updatePizzaDetails" text="Small">
-            <toggleGroup>
-               <ToggleGroup fx:id="sizes" />
-            </toggleGroup>
+                <toggleGroup>
+                    <ToggleGroup fx:id="sizes" />
+                </toggleGroup>
             </RadioButton>
             <RadioButton fx:id="mediumRadioButton" onAction="#updatePizzaDetails" text="Medium" toggleGroup="$sizes" />
             <RadioButton fx:id="largeRadioButton" onAction="#updatePizzaDetails" text="Large" toggleGroup="$sizes" />
 
-            <Label text="Additional Options:" />
-            <CheckBox fx:id="extraSauceCheckBox" onAction="#updatePizzaDetails" text="Extra Sauce" />
-            <CheckBox fx:id="extraCheeseCheckBox" onAction="#updatePizzaDetails" text="Extra Cheese" />
+            <VBox spacing="5" style="-fx-margin: 10;" translateY="20.0">
+                <Label text="Sauce" />
+                <TextField fx:id="sauceTextField" prefWidth="140" />
+            </VBox>
+
+            <Label text="Additional Options:" translateY="35.0" />
+            <CheckBox fx:id="extraSauceCheckBox" onAction="#updatePizzaDetails" text="Extra Sauce" translateY="35.0" />
+            <CheckBox fx:id="extraCheeseCheckBox" onAction="#updatePizzaDetails" text="Extra Cheese" translateY="35.0" />
         </VBox>
     </HBox>
-      <ImageView fx:id="pizzaImageView" fitHeight="140.0" fitWidth="140.0" translateX="-85.0" translateY="-230.0">
-          <image>
-              <Image url="https://waynesburgpizza.com/wp-content/uploads/2019/12/Deluxe-1-scaled.jpg" />
-          </image>
-      </ImageView>
+    <ImageView fx:id="pizzaImageView" fitHeight="140.0" fitWidth="140.0" translateX="-85.0" translateY="-280.0">
+        <image>
+            <Image url="https://waynesburgpizza.com/wp-content/uploads/2019/12/Deluxe-1-scaled.jpg" />
+        </image>
+    </ImageView>
 
     <HBox spacing="10" style="-fx-margin: 10;">
-        <VBox style="-fx-margin: 10;">
-            <Button onAction="#placeSpecialtyPizzaOrder" text="Place Order" translateX="135.0" translateY="-50.0" />
+        <VBox style="-fx-margin: 10;" translateX="135.0" translateY="-40.0">
+            <Button onAction="#placeSpecialtyPizzaOrder" text="Place Order" />
         </VBox>
     </HBox>
 </VBox>
