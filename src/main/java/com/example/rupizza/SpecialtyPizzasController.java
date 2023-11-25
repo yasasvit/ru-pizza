@@ -10,8 +10,6 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.TextField;
 
 public class SpecialtyPizzasController {
-//    @FXML
-//    private ToggleGroup sizesToggleGroup;
     private PizzaOrderService pizzaOrderService = PizzaOrderService.getInstance();
     @FXML
     private RadioButton smallRadioButton;
@@ -67,6 +65,9 @@ public class SpecialtyPizzasController {
     @FXML
     public void updatePizzaDetails() {
         String selectedPizza = pizzaComboBox.getValue();
+        if (selectedPizza == null) {
+            return;
+        }
         String imagePath = "";
         String toppingsText = "";
         double basePrice = 0;
@@ -104,7 +105,7 @@ public class SpecialtyPizzasController {
                 break;
         }
         toppingsListView.setItems(toppingsList);
-        pizzaImageView.setImage(new Image(HelloApplication.class.getResource(imagePath).toExternalForm()));
+        pizzaImageView.setImage(new Image(RUPizzaMain.class.getResource(imagePath).toExternalForm()));
         if (smallRadioButton.isSelected()) {
         } else if (mediumRadioButton.isSelected()) {
             basePrice += 2.0;

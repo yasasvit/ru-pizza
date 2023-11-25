@@ -26,7 +26,7 @@
 
     <HBox spacing="10" style="-fx-padding: 10px;">
         <Button fx:id="removeOrderButton" onAction="#removeSelectedOrder" text="Cancel Order" translateX="30.0" translateY="20.0" />
-        <Button fx:id="exportStoreOrdersButton" text="Export Store Orders" translateX="225.0" translateY="20.0" />
+        <Button fx:id="exportStoreOrdersButton" onAction="#exportStoreOrders" text="Export Store Orders" translateX="225.0" translateY="20.0" />
     </HBox>
 
 </VBox>

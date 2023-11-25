@@ -43,11 +43,11 @@
             </ComboBox>
 
             <Label text="Sauce Options" translateX="25.0" />
-            <RadioButton fx:id="tomatoSauceRadioButton" text="Tomato Sauce" translateX="25.0">
+            <RadioButton fx:id="tomatoSauceRadioButton" onAction="#updatePriceField" text="Tomato Sauce" translateX="25.0">
             <toggleGroup>
                <ToggleGroup fx:id="byosauces" />
             </toggleGroup></RadioButton>
-            <RadioButton fx:id="alfredoSauceRadioButton" text="Alfredo Sauce" toggleGroup="$byosauces" translateX="25.0" />
+            <RadioButton fx:id="alfredoSauceRadioButton" onAction="#updatePriceField" text="Alfredo Sauce" toggleGroup="$byosauces" translateX="25.0" />
 
             <Label text="Additional Options" translateX="20.0" translateY="10.0" />
             <CheckBox fx:id="extraSauceCheckBox" onAction="#updatePriceField" text="Extra Sauce" translateX="25.0" translateY="10.0" />

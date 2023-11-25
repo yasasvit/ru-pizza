@@ -4,6 +4,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import java.io.File;
 
 public class StoreOrderController {
     private StoreOrders storeOrders = StoreOrders.getInstance();
@@ -114,7 +117,17 @@ public class StoreOrderController {
             clearOrderDetails();
         }
     }
+    @FXML
+    private void exportStoreOrders() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
+        File file = fileChooser.showSaveDialog(null);
 
+        if (file != null) {
+            storeOrders.export(file.getAbsolutePath());
+        }
+        showSuccessAlert();
+    }
     private void clearOrderDetails() {
         orderDetailsListView.setItems(FXCollections.emptyObservableList());
         orderTotalTextField.clear();
@@ -126,4 +139,13 @@ public class StoreOrderController {
         alert.setContentText(contentText);
         alert.showAndWait();
     }
+
+    private void showSuccessAlert() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Store Orders exported");
+        alert.setHeaderText(null);
+        alert.setContentText("Store Orders exported successfully!");
+        alert.showAndWait();
+    }
+
 }

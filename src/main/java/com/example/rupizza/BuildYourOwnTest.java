@@ -1,7 +1,6 @@
 package com.example.rupizza;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,7 +18,7 @@ public class BuildYourOwnTest {
         Pizza pizza = PizzaMaker.createPizza("buildyourown", size, sauce, toppings, extraSauce, extraCheese);
 
         // Small base price: $8.99 + $1 for extra sauce
-        assertEquals(9.99, pizza.price(), 0.01);
+        Assert.assertEquals(9.99, pizza.price(), 0.01);
     }
 
     @Test
@@ -33,7 +32,7 @@ public class BuildYourOwnTest {
         Pizza pizza = PizzaMaker.createPizza("buildyourown", size, sauce, toppings, extraSauce, extraCheese);
 
         // Medium base price: $8.99 + $2 for medium size + $1 for extra cheese
-        assertEquals(11.99, pizza.price(), 0.01);
+        Assert.assertEquals(11.99, pizza.price(), 0.01);
     }
 
     @Test
@@ -47,7 +46,7 @@ public class BuildYourOwnTest {
         Pizza pizza = PizzaMaker.createPizza("buildyourown", size, sauce, toppings, extraSauce, extraCheese);
 
         // Large base price: $8.99 + $4 for large size + $1 for extra sauce + $1 for extra cheese
-        assertEquals(14.99, pizza.price(), 0.01);
+        Assert.assertEquals(14.99, pizza.price(), 0.01);
     }
 
     @Test
@@ -61,7 +60,7 @@ public class BuildYourOwnTest {
         Pizza pizza = PizzaMaker.createPizza("buildyourown", size, sauce, toppings, extraSauce, extraCheese);
 
         // Medium base price: $8.99 + $2 for medium size + $2.98 for 2 extra toppings
-        assertEquals(13.97, pizza.price(), 0.01);
+        Assert.assertEquals(13.97, pizza.price(), 0.01);
     }
 
     @Test
@@ -75,7 +74,7 @@ public class BuildYourOwnTest {
         Pizza pizza = PizzaMaker.createPizza("buildyourown", size, sauce, toppings, extraSauce, extraCheese);
 
         // Large base price: $8.99 + $4 for large size + $1 for extra sauce + $1 for extra cheese
-        assertEquals(14.99, pizza.price(), 0.01);
+        Assert.assertEquals(14.99, pizza.price(), 0.01);
     }
 
     @Test
@@ -89,6 +88,6 @@ public class BuildYourOwnTest {
         Pizza pizza = PizzaMaker.createPizza("buildyourown", size, sauce, toppings, extraSauce, extraCheese);
 
         // Small base price: $8.99
-        assertEquals(8.99, pizza.price(), 0.01);
+        Assert.assertEquals(8.99, pizza.price(), 0.01);
     }
 }
