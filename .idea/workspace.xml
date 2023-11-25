@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96284d5d-7433-4e5e-88ef-8831533c2c76" name="Changes" comment="code donish">
+    <list default="true" id="96284d5d-7433-4e5e-88ef-8831533c2c76" name="Changes" comment="code final">
       <change beforePath="$PROJECT_DIR$/../RUBankFX--" beforeDir="false" afterPath="$PROJECT_DIR$/../RUBankFX--" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../event-calendar" beforeDir="false" afterPath="$PROJECT_DIR$/../event-calendar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pandas_exercises" beforeDir="false" afterPath="$PROJECT_DIR$/../pandas_exercises" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/BuildYourOwn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/BuildYourOwn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/BuildYourOwnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/BuildYourOwnTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/RUPizzaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/SpecialtyPizzasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/SpecialtyPizzasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/StoreOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/StoreOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/StoreOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/StoreOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/build-your-own.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/build-your-own.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/store-order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizza/store-order.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700876250473</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="code final">
+      <option name="closed" value="true" />
+      <created>1700881643002</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700881643002</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="code donish" />
-    <option name="LAST_COMMIT_MESSAGE" value="code donish" />
+    <MESSAGE value="code final" />
+    <option name="LAST_COMMIT_MESSAGE" value="code final" />
   </component>
 </project>
