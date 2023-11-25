@@ -5,6 +5,9 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.TextField;
 
 public class SpecialtyPizzasController {
 //    @FXML
@@ -32,10 +35,12 @@ public class SpecialtyPizzasController {
     private ImageView pizzaImageView;
 
     @FXML
-    private TextArea toppingsTextArea;
+    private ListView<String> toppingsListView;
 
     @FXML
     private TextField priceTextField;
+    @FXML
+    private TextField sauceTextField;
 
     private void showAlert() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -46,7 +51,7 @@ public class SpecialtyPizzasController {
     }
     private void showSuccessAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Order Placed Successfully");
+        alert.setTitle("Pizza added");
         alert.setHeaderText(null);
         alert.setContentText("Pizza added to the order!");
         alert.showAndWait();
@@ -55,7 +60,7 @@ public class SpecialtyPizzasController {
     @FXML
     public void initialize() {
         pizzaComboBox.getItems().addAll("Deluxe", "Supreme", "Meatzza", "Seafood", "Pepperoni");
-
+        toppingsListView.setItems(FXCollections.emptyObservableList());
         pizzaComboBox.setOnAction(event -> updatePizzaDetails());
     }
 
@@ -65,34 +70,40 @@ public class SpecialtyPizzasController {
         String imagePath = "";
         String toppingsText = "";
         double basePrice = 0;
+        ObservableList<String> toppingsList = FXCollections.observableArrayList();
         switch (selectedPizza) {
             case "Deluxe":
                 imagePath = "deluxe-img.jpg";
-                toppingsText = "Sausage, Pepperoni, Green Pepper, Onion, Mushroom";
+                toppingsList.addAll("Sausage", "Pepperoni", "Green Pepper", "Onion", "Mushroom");
                 basePrice = 14.99;
+                sauceTextField.setText("Tomato");
                 break;
             case "Supreme":
                 imagePath = "supreme-img.jpg";
-                toppingsText = "Sausage, Ham, Pepperoni, Green Pepper, Onion, Black Olive, Mushroom";
+                toppingsList.addAll("Sausage", "Ham", "Pepperoni", "Green Pepper", "Onion", "Black Olive", "Mushroom");
+                sauceTextField.setText("Tomato");
                 basePrice = 15.99;
                 break;
             case "Meatzza":
                 imagePath = "meatzza-img.jpg";
-                toppingsText = "Beef, Ham, Sausage, Pepperoni";
+                toppingsList.addAll("Beef", "Ham", "Sausage", "Pepperoni");
                 basePrice = 16.99;
+                sauceTextField.setText("Tomato");
                 break;
             case "Seafood":
                 imagePath = "seafood-img.jpg";
-                toppingsText = "Shrimp, Squid, Crab Meats";
+                toppingsList.addAll("Shrimp", "Squid", "Crab Meats");
                 basePrice = 17.99;
+                sauceTextField.setText("Alfredo");
                 break;
             case "Pepperoni":
                 imagePath = "pepperoni-img.jpg";
-                toppingsText = "Pepperoni";
+                toppingsList.addAll("Pepperoni");
                 basePrice = 10.99;
+                sauceTextField.setText("Tomato");
                 break;
         }
-        toppingsTextArea.setText(toppingsText);
+        toppingsListView.setItems(toppingsList);
         pizzaImageView.setImage(new Image(HelloApplication.class.getResource(imagePath).toExternalForm()));
         if (smallRadioButton.isSelected()) {
         } else if (mediumRadioButton.isSelected()) {
@@ -130,23 +141,22 @@ public class SpecialtyPizzasController {
         Pizza pizza = null;
         switch (selectedPizza) {
             case "Deluxe":
-                pizza = new Deluxe(selectedSize, isExtraSauce, isExtraCheese);
+                pizza = PizzaMaker.createPizza("deluxe", selectedSize, null, null, isExtraSauce, isExtraCheese);
                 break;
             case "Supreme":
-                pizza = new Supreme(selectedSize, isExtraSauce, isExtraCheese);
+                pizza = PizzaMaker.createPizza("supreme",selectedSize, null, null, isExtraSauce, isExtraCheese);
                 break;
             case "Meatzza":
-                pizza = new Meatzza(selectedSize, isExtraSauce, isExtraCheese);
+                pizza = PizzaMaker.createPizza("meatzza", selectedSize, null, null, isExtraSauce, isExtraCheese);
                 break;
             case "Seafood":
-                pizza = new Seafood(selectedSize, isExtraSauce, isExtraCheese);
+                pizza = PizzaMaker.createPizza("seafood", selectedSize, null, null, isExtraSauce, isExtraCheese);
                 break;
             case "Pepperoni":
-                pizza = new Pepperoni(selectedSize, isExtraSauce, isExtraCheese);
+                pizza = PizzaMaker.createPizza("pepperoni", selectedSize, null, null, isExtraSauce, isExtraCheese);
                 break;
         }
         pizzaOrderService.addPizzaToOrder(pizza);
         showSuccessAlert();
     }
-
 }

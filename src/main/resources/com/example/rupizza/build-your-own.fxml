@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="543.0" prefWidth="543.0" spacing="10" style="-fx-margin: 10;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.BuildYourOwnController">
+<VBox alignment="CENTER" prefHeight="543.0" prefWidth="543.0" spacing="10" style="-fx-margin: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rupizza.BuildYourOwnController">
 
     <Label style="-fx-font-size: 24;" text="Build Your Own Pizza" translateY="-15.0" />
 
@@ -19,7 +28,7 @@
 
             <Label text="Additional Toppings" translateY="30.0" />
             <ListView fx:id="additionalToppingsListView" prefHeight="58.0" prefWidth="231.0" translateY="20.0" />
-            <Button text="Add Topping" translateX="70.0" translateY="15.0" />
+            <Button fx:id="addToppingButton" onAction="#addTopping" text="Add Topping" translateX="70.0" translateY="15.0" />
 
             <Label text="Price $" translateX="5.0" translateY="40.0" />
             <TextField fx:id="priceTextField" prefHeight="26.0" prefWidth="201.0" translateX="5.0" translateY="35.0" />
@@ -27,27 +36,30 @@
 
         <VBox prefHeight="403.0" prefWidth="232.0" spacing="10" style="-fx-margin: 10;" translateX="30.0">
             <Label text="Pizza Size" translateX="50.0" />
-            <ComboBox fx:id="pizzaSizeComboBox" prefHeight="26.0" prefWidth="106.0" translateX="25.0" translateY="-10.0">
+            <ComboBox fx:id="sizeComboBox" onAction="#updatePriceField" prefHeight="26.0" prefWidth="106.0" translateX="25.0" translateY="-10.0">
                 <items>
                     <!-- Add pizza size options here -->
                 </items>
             </ComboBox>
 
             <Label text="Sauce Options" translateX="25.0" />
-            <RadioButton text="Tomato Sauce" translateX="25.0" />
-            <RadioButton text="Alfredo Sauce" translateX="25.0" />
+            <RadioButton fx:id="tomatoSauceRadioButton" text="Tomato Sauce" translateX="25.0">
+            <toggleGroup>
+               <ToggleGroup fx:id="byosauces" />
+            </toggleGroup></RadioButton>
+            <RadioButton fx:id="alfredoSauceRadioButton" text="Alfredo Sauce" toggleGroup="$byosauces" translateX="25.0" />
 
             <Label text="Additional Options" translateX="20.0" translateY="10.0" />
-            <CheckBox text="Extra Sauce" translateX="25.0" translateY="10.0" />
-            <CheckBox text="Extra Cheese" translateX="25.0" translateY="10.0" />
+            <CheckBox fx:id="extraSauceCheckBox" onAction="#updatePriceField" text="Extra Sauce" translateX="25.0" translateY="10.0" />
+            <CheckBox fx:id="extraCheeseCheckBox" onAction="#updatePriceField" text="Extra Cheese" translateX="25.0" translateY="10.0" />
 
             <VBox style="-fx-margin: 10; margin-top: 20;">
                 <Label text="Selected Toppings" translateY="20.0" />
                 <ListView fx:id="selectedToppingsListView" prefHeight="60.0" prefWidth="232.0" translateY="21.0" />
-                <Button text="Remove Topping" translateX="60.0" translateY="25.0" />
+                <Button fx:id="removeToppingButton" onAction="#removeTopping" text="Remove Topping" translateX="60.0" translateY="25.0" />
             </VBox>
 
-            <Button layoutX="1.0" layoutY="1.0" prefHeight="26.0" prefWidth="109.0" text="Add to Order" translateX="60.0" translateY="45.0" wrapText="true">
+            <Button fx:id="placeOrderButton" layoutX="1.0" layoutY="1.0" onAction="#placeOrder" prefHeight="26.0" prefWidth="109.0" text="Add to Order" translateX="60.0" translateY="45.0" wrapText="true">
                 <VBox.margin>
                     <Insets left="1.0" top="1.0" />
                 </VBox.margin></Button>

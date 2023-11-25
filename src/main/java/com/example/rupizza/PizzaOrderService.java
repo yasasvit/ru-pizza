@@ -22,6 +22,10 @@ public class PizzaOrderService {
         return currentOrder;
     }
 
+    public void clearCurrentOrder() {
+        currentOrder = new Order();
+    }
+
     public void addPizzaToOrder(Pizza pizza) {
         currentOrder.addPizza(pizza);
     }

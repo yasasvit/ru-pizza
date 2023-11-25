@@ -43,10 +43,8 @@ public class MainMenuController {
     void handleBrowseStoreOrders(ActionEvent event) {
         loadFXML("store-order.fxml", "Browse Store Orders");
     }
-
     private void loadFXML(String fxmlFile, String windowTitle) {
         try {
-            System.out.print(fxmlFile);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
