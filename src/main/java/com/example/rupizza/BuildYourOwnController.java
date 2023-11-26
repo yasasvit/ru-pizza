@@ -7,6 +7,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import java.util.ArrayList;
 
+
+/**
+* This class manages the BuildYourOwn FXML file and controls the action events of each button
+* @authors Pranav Gummaluri, Yasasvi Tallapaneni
+*/
 public class BuildYourOwnController {
 
     private PizzaOrderService pizzaOrderService = PizzaOrderService.getInstance();
@@ -43,6 +48,9 @@ public class BuildYourOwnController {
     @FXML
     private TextField priceTextField;
 
+    /*
+    * This is the initialization method that is called when the FXML is loaded
+    */
     @FXML
     public void initialize() {
         initializeSizeComboBox();
@@ -53,17 +61,25 @@ public class BuildYourOwnController {
         placeOrderButton.setOnAction(event -> placeOrder());
     }
 
+    /*
+    * This method initializes the pizza size combo box
+    */
     private void initializeSizeComboBox() {
         ObservableList<String> sizes = FXCollections.observableArrayList("small", "medium", "large");
         sizeComboBox.setItems(sizes);
     }
-
+    /*
+    * This method initializes the toppings list view
+    */
     private void initializeToppingsListView() {
         ObservableList<String> toppings = FXCollections.observableArrayList(
                 "Sausage", "Chicken", "Beef", "Ham", "Pepperoni", "Shrimp", "Squid",
                 "CrabMeats", "GreenPepper", "Onion", "Mushroom", "Pineapple", "BlackOlives");
         additionalToppingsListView.setItems(toppings);
     }
+    /*
+    * This method is the event handler for adding a topping to the selected toppings list
+    */
     @FXML
     private void addTopping() {
         String selectedTopping = additionalToppingsListView.getSelectionModel().getSelectedItem();
@@ -84,6 +100,10 @@ public class BuildYourOwnController {
         selectedToppings.add(selectedTopping);
         updatePriceField();
     }
+
+    /*
+    * This method is the event handler for removing a topping to the selected toppings list
+    */
     @FXML
     private void removeTopping() {
         String selectedTopping = selectedToppingsListView.getSelectionModel().getSelectedItem();
@@ -101,6 +121,9 @@ public class BuildYourOwnController {
         updatePriceField();
     }
 
+    /*
+    * This method is the event handler for placing the pizza order
+    */
     public void placeOrder() {
         String selectedSize = sizeComboBox.getValue();
         String selectedSauce = tomatoSauceRadioButton.isSelected() ? "tomato" : (alfredoSauceRadioButton.isSelected() ? "alfredo" : null);
@@ -131,6 +154,9 @@ public class BuildYourOwnController {
         showSuccessAlert();
     }
 
+    /*
+    * This method displays a success alert
+    */
     private void showSuccessAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Pizza added");
@@ -139,6 +165,10 @@ public class BuildYourOwnController {
         alert.showAndWait();
     }
 
+    /*
+    * This method displays an error alert with the given content
+    * @param String content representing the String to be displayed in the alert box
+    */
     private void showAlert(String content) {
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle("Error");
@@ -146,6 +176,10 @@ public class BuildYourOwnController {
         alert.setContentText(content);
         alert.showAndWait();
     }
+    
+    /*
+    * This method updates the displayed price based on the selected options
+    */
     @FXML
     private void updatePriceField(){
         int toppingsCount = selectedToppingsListView.getItems().size();
