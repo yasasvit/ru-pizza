@@ -97,6 +97,7 @@ public class CurrentOrderController {
     /**
     * This method builds a string representation of pizza toppings
     * @param Pizza "pizza" representing the pizza object created via the GUI
+    * @return A string which represents the toppings selected for the pizza
     */
     private String getToppingsString(Pizza pizza) {
         StringBuilder toppingsString = new StringBuilder();
