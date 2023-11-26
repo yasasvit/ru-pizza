@@ -8,14 +8,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * The main class for the RU Pizza application.
+ * The main class for the RU Pizza application
  * @authors Pranav Gummaluri, Yasasvi Tallapaneni
  */
 public class RUPizzaMain extends Application {
 
     /**
-     * This method is the starting point for the JavaFX application.
-     * @param stage The primary stage for the application.
+     * This method is the starting point for the JavaFX application
+     * @param stage The primary stage for the application
      */
     @Override
     public void start(Stage stage) throws IOException {
@@ -27,7 +27,7 @@ public class RUPizzaMain extends Application {
     }
 
     /**
-    * Main method to launch the JavaFX application.
+    * Main method to launch the JavaFX application
     */
     public static void main(String[] args) {
         launch();
