@@ -2,6 +2,10 @@ package com.example.rupizza;
 
 import java.util.ArrayList;
 
+/**
+* This class is for building custom pizzas with different sizes, sauces, toppings, and extra options.
+* @authors Yasasvi Tallapaneni, Pranav Gummaluri
+*/
 public class BuildYourOwn extends Pizza {
     public BuildYourOwn(Size size, Sauce sauce, ArrayList<Topping> selectedToppings, boolean extraSauce, boolean extraCheese) {
         this.size = size;
@@ -11,6 +15,10 @@ public class BuildYourOwn extends Pizza {
         this.extraCheese = extraCheese;
     }
 
+    /**
+    * This method manages the price of the pizza and takes into 
+    * account size changes and optional extras 
+    */
     @Override
     public double price() {
         double basePrice = 8.99;
