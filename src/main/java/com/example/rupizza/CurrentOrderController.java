@@ -6,7 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
 
 /**
- * Controller class for managing the current pizza order details and placing orders.
+ * Controller class for managing the current pizza order details and placing orders
  * @authors Pranav Gummaluri, Yasasvi Tallapaneni
  */
 public class CurrentOrderController {
