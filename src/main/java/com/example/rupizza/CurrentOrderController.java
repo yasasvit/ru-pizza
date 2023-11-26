@@ -5,6 +5,10 @@ import javafx.scene.control.*;
 import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
 
+/**
+ * Controller class for managing the current pizza order details and placing orders.
+ * @authors Pranav Gummaluri, Yasasvi Tallapaneni
+ */
 public class CurrentOrderController {
     private StoreOrders storeOrders = StoreOrders.getInstance();
 
@@ -27,6 +31,11 @@ public class CurrentOrderController {
     private Button placeOrderButton;
     @FXML
     private Button removePizzaButton;
+    
+    /**
+    * This method displays an error alert with the given text
+    * @param String text representing the text to be displayed on the alert box
+    */
     private void showAlert(String text) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
@@ -35,6 +44,9 @@ public class CurrentOrderController {
         alert.showAndWait();
     }
 
+    /**
+    * This initialization method is called when the FXML is loaded
+    */
     @FXML
     public void initialize() {
         updateOrderDetails();
@@ -42,6 +54,9 @@ public class CurrentOrderController {
         placeOrderButton.setOnAction(event -> placeOrder());
     }
 
+    /**
+    * This method updates the order details displayed in the UI
+    */
     private void updateOrderDetails() {
         Order currentOrder = pizzaOrderService.getCurrentOrder();
 
@@ -79,6 +94,10 @@ public class CurrentOrderController {
 
     }
 
+    /**
+    * This method builds a string representation of pizza toppings
+    * @param Pizza "pizza" representing the pizza object created via the GUI
+    */
     private String getToppingsString(Pizza pizza) {
         StringBuilder toppingsString = new StringBuilder();
 
@@ -92,6 +111,10 @@ public class CurrentOrderController {
 
         return toppingsString.toString();
     }
+
+    /**
+    * This method is an event handler for removing a pizza from the current order
+    */
     @FXML
     private void removePizza() {
         int selectedIndex = orderDetailsListView.getSelectionModel().getSelectedIndex();
@@ -102,6 +125,10 @@ public class CurrentOrderController {
             showAlert("Pizza needs to be selected in order to be removed.");
         }
     }
+
+    /**
+    * This method is an event handler for placing the current order
+    */
     @FXML
     private void placeOrder() {
         Order currentOrder = pizzaOrderService.getCurrentOrder();
@@ -125,6 +152,9 @@ public class CurrentOrderController {
         showSuccessAlert();
     }
 
+    /**
+    * This method displays a success alert for order placement
+    */
     private void showSuccessAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Order placed");
