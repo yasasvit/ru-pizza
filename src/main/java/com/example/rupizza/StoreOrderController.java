@@ -14,7 +14,6 @@ import java.io.File;
  */
 public class StoreOrderController {
     private StoreOrders storeOrders = StoreOrders.getInstance();
-    private PizzaOrderService pizzaOrderService = PizzaOrderService.getInstance();
 
     @FXML
     private ComboBox<Integer> orderNumberComboBox;

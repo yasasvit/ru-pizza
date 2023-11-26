@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96284d5d-7433-4e5e-88ef-8831533c2c76" name="Changes" comment="code final">
+    <list default="true" id="96284d5d-7433-4e5e-88ef-8831533c2c76" name="Changes" comment="comment updates">
       <change beforePath="$PROJECT_DIR$/../RUBankFX--" beforeDir="false" afterPath="$PROJECT_DIR$/../RUBankFX--" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../event-calendar" beforeDir="false" afterPath="$PROJECT_DIR$/../event-calendar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pandas_exercises" beforeDir="false" afterPath="$PROJECT_DIR$/../pandas_exercises" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/Supreme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/Supreme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizza/StoreOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizza/StoreOrderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +34,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "yasasvit"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yasasvit&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -71,6 +71,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/rupizza" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/rupizza" />
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -153,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700882322788</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="comment updates">
+      <option name="closed" value="true" />
+      <created>1700977032494</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700977032494</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +181,7 @@
     <MESSAGE value="update" />
     <MESSAGE value="code donish" />
     <MESSAGE value="code final" />
-    <option name="LAST_COMMIT_MESSAGE" value="code final" />
+    <MESSAGE value="comment updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment updates" />
   </component>
 </project>
