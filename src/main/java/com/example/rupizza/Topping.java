@@ -1,5 +1,9 @@
 package com.example.rupizza;
 
+/**
+* Enum class representing the 13 pizza toppings
+* @authors Pranav Gummaluri, Yasasvi Tallapaneni
+*/
 public enum Topping {
     Sausage,
     Chicken,
