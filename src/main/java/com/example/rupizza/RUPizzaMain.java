@@ -7,7 +7,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * The main class for the RU Pizza application.
+ * @authors Pranav Gummaluri, Yasasvi Tallapaneni
+ */
 public class RUPizzaMain extends Application {
+
+    /**
+     * This method is the starting point for the JavaFX application.
+     * @param stage The primary stage for the application.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(RUPizzaMain.class.getResource("main-menu.fxml"));
@@ -17,6 +26,9 @@ public class RUPizzaMain extends Application {
         stage.show();
     }
 
+    /**
+    * Main method to launch the JavaFX application.
+    */
     public static void main(String[] args) {
         launch();
     }
