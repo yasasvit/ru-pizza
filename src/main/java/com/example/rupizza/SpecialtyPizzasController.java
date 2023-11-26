@@ -9,6 +9,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TextField;
 
+/**
+ * This is the controller class for the Specialty Pizzas view
+ * @authors Yasasvi Tallapaneni, Pranav Gummaluri
+ */
 public class SpecialtyPizzasController {
     private PizzaOrderService pizzaOrderService = PizzaOrderService.getInstance();
     @FXML
@@ -40,6 +44,9 @@ public class SpecialtyPizzasController {
     @FXML
     private TextField sauceTextField;
 
+    /**
+     * This method displays an error alert when pizza type and size are not selected
+     */
     private void showAlert() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
@@ -47,6 +54,10 @@ public class SpecialtyPizzasController {
         alert.setContentText("Pizza type and size are required.");
         alert.showAndWait();
     }
+
+    /**
+     * Displays an success alert when pizza is added to the order
+     */
     private void showSuccessAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Pizza added");
@@ -55,6 +66,9 @@ public class SpecialtyPizzasController {
         alert.showAndWait();
     }
 
+    /**
+     * This method initializes the controller
+     */
     @FXML
     public void initialize() {
         pizzaComboBox.getItems().addAll("Deluxe", "Supreme", "Meatzza", "Seafood", "Pepperoni");
@@ -62,6 +76,9 @@ public class SpecialtyPizzasController {
         pizzaComboBox.setOnAction(event -> updatePizzaDetails());
     }
 
+    /**
+     * This method updates the pizza details based on the specified pizza type
+     */
     @FXML
     public void updatePizzaDetails() {
         String selectedPizza = pizzaComboBox.getValue();
@@ -122,6 +139,10 @@ public class SpecialtyPizzasController {
         }
         priceTextField.setText(String.format("%.2f", basePrice));
     }
+
+    /**
+     * This method places an order for the specified specialty pizza
+     */
     @FXML
     public void placeSpecialtyPizzaOrder() {
         String selectedPizza = pizzaComboBox.getValue();
