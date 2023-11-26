@@ -21,6 +21,7 @@ public class Meatzza extends Pizza {
 
     /**
     * This method defines the base price of the Meatzza and increases the price accordingly to each addon
+    * @return a double which represents the price of the optioned pizza
     */
     @Override
     public double price() {
