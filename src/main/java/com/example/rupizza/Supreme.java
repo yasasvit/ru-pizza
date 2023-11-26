@@ -22,7 +22,7 @@ public class Supreme extends Pizza{
         this.extraCheese = extraCheese;
     }
 
-    /*
+    /**
     * This method calculates the price of the Supreme with any addons 
     * @return a double representing price with any addons
     */
