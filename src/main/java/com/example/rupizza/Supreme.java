@@ -2,7 +2,7 @@ package com.example.rupizza;
 
 import java.util.ArrayList;
 
-/*
+/**
 * This class represents the Supreme specialty pizza and calculates the price with addons
 * @authors Yasasvi Tallapaneni, Pranav Gummaluri
 */
@@ -22,7 +22,7 @@ public class Supreme extends Pizza{
         this.extraCheese = extraCheese;
     }
 
-    /*
+    /**
     * This method calculates the price of the Supreme with any addons 
     * @return a double representing price with any addons
     */
