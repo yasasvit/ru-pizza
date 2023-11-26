@@ -5,13 +5,13 @@ import org.junit.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/*
+/**
 * This class is a tester class for the BuildYourOwn class, it tests the price() method
 * @authors Pranav Gummaluri, Yasasvi Tallapaneni
 */
 public class BuildYourOwnTest {
 
-    /*
+    /**
     * The inputs are size = small; sauce = tomato; toppings = pepperoni, mushroom, onion; no extra sauce but yes to extra cheese
     */
     @Test
@@ -28,7 +28,7 @@ public class BuildYourOwnTest {
         Assert.assertEquals(9.99, pizza.price(), 0.01);
     }
 
-    /*
+    /**
     * The inputs are size = medium; sauce = tomato; toppings = pepperoni, mushroom, onion; no extra sauce but yes for extra sauce
     */
     @Test
@@ -45,7 +45,7 @@ public class BuildYourOwnTest {
         Assert.assertEquals(11.99, pizza.price(), 0.01);
     }
 
-    /*
+    /**
     * The inputs are size = large; sauce = alfredo; toppings = sausage, green pepper, onion; yes to extra cheese and sauce
     */
     @Test
@@ -62,7 +62,7 @@ public class BuildYourOwnTest {
         Assert.assertEquals(14.99, pizza.price(), 0.01);
     }
 
-    /*
+    /**
     * The inputs are size = medium; sauce = tomato; toppings = pepperoni, mushroom, onion, green pepper and ham; no extra cheese or sauce
     */
     @Test
@@ -79,7 +79,7 @@ public class BuildYourOwnTest {
         Assert.assertEquals(13.97, pizza.price(), 0.01);
     }
     
-    /*
+    /**
     * The inputs are size = large; sauce = tomato; toppings = pepperoni, mushroom, onion; yes to extra cheese and sauce
     */
     @Test
@@ -96,7 +96,7 @@ public class BuildYourOwnTest {
         Assert.assertEquals(14.99, pizza.price(), 0.01);
     }
 
-    /*
+    /**
     * The inputs are size = small; sauce = tomato; toppings = pepperoni, mushroom, onion; no extra cheese or sauce
     */
     @Test
