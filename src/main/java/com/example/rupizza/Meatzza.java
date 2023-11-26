@@ -2,6 +2,10 @@ package com.example.rupizza;
 
 import java.util.ArrayList;
 
+/**
+* This class represents the Meatzza specialty pizza and its base price
+* @authors Pranav Gummaluri, Yasasvi Tallapaneni
+*/
 public class Meatzza extends Pizza {
     public Meatzza(Size size, boolean extraSauce, boolean extraCheese) {
         this.size = size;
@@ -15,6 +19,9 @@ public class Meatzza extends Pizza {
         this.extraCheese = extraCheese;
     }
 
+    /**
+    * This method defines the base price of the Meatzza and increases the price accordingly to each addon
+    */
     @Override
     public double price() {
         double basePrice = 16.99;
