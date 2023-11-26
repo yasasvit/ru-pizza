@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class manages the current pizza order.
+ * This class manages the current pizza order
  * @authors Pranav Gummaluri, Yasasvi Tallapaneni
  */
 public class PizzaOrderService {
@@ -12,14 +12,14 @@ public class PizzaOrderService {
     private Order currentOrder;
 
     /**
-     * A private constructor to create an instance of PizzaOrderService and initialize the current order.
+     * A private constructor to create an instance of PizzaOrderService and initialize the current order
      */
     private PizzaOrderService() {
         currentOrder = new Order();
     }
 
     /**
-     * This method gets the instance of PizzaOrderService. If it does not exist, creates a new instance.
+     * This method gets the instance of PizzaOrderService. If it does not exist, creates a new instance
      * @return the current instance of PizzaOrderService.
      */
     public static PizzaOrderService getInstance() {
@@ -30,8 +30,8 @@ public class PizzaOrderService {
     }
 
     /**
-     * This method gets the current pizza order.
-     * @return Order object "order" representing the pizza order.
+     * This method gets the current pizza order
+     * @return Order object "order" representing the pizza order
      */
     public Order getCurrentOrder() {
         return currentOrder;
@@ -45,8 +45,8 @@ public class PizzaOrderService {
     }
 
     /**
-     * This method adds a pizza to the current order.
-     * @param Pizza object "pizza" to be added to the order.
+     * This method adds a pizza to the current order
+     * @param Pizza object "pizza" to be added to the order
      */
     public void addPizzaToOrder(Pizza pizza) {
         currentOrder.addPizza(pizza);
