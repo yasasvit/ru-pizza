@@ -2,6 +2,10 @@ package com.example.rupizza;
 
 import java.util.ArrayList;
 
+/**
+* This class represents the Deluxe specialty pizza and its base price
+* @authors Pranav Gummaluri, Yasasvi Tallapaneni
+*/
 public class Deluxe extends Pizza {
     public Deluxe(Size size, boolean extraSauce, boolean extraCheese) {
         this.size = size;
@@ -16,6 +20,9 @@ public class Deluxe extends Pizza {
         this.extraCheese = extraCheese;
     }
 
+    /**
+    * This method gives us the base price of the Deluxe pizza, will increase the price with each addon
+    */
     @Override
     public double price() {
         double basePrice = 14.99;
