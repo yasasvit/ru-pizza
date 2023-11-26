@@ -12,6 +12,11 @@ public abstract class Pizza {
     protected Sauce sauce;
     protected boolean extraSauce;
     protected boolean extraCheese;
+
+    /*
+    * This method is an abstract method to calculate the price of a pizza
+    * @return a double representing the price of the pizza
+    */
     public abstract double price();
 
 }
