@@ -2,6 +2,10 @@ package com.example.rupizza;
 
 import java.util.ArrayList;
 
+/**
+* This class represents the Seafood specialty pizza and its price
+* @authors Yasasvi Tallapaneni, Pranav Gummaluri
+*/
 public class Seafood extends Pizza{
     public Seafood(Size size, boolean extraSauce, boolean extraCheese) {
         this.size = size;
@@ -14,6 +18,10 @@ public class Seafood extends Pizza{
         this.extraCheese = extraCheese;
     }
 
+    /**
+    * This method calculates the price of the pizza with any addon options
+    * @return a double representing the price of the optioned pizza
+    */
     @Override
     public double price() {
         double basePrice = 17.99;
