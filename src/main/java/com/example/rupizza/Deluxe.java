@@ -22,6 +22,7 @@ public class Deluxe extends Pizza {
 
     /**
     * This method gives us the base price of the Deluxe pizza, will increase the price with each addon
+    * @return a double which represents the price of the optioned pizza
     */
     @Override
     public double price() {
