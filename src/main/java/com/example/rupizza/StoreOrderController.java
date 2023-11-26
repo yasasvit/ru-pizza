@@ -8,6 +8,10 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import java.io.File;
 
+/**
+ * This class is the controller class for managing store orders
+ * @authors Yasasvi Tallapaneni, Pranav Gummaluri
+ */
 public class StoreOrderController {
     private StoreOrders storeOrders = StoreOrders.getInstance();
     private PizzaOrderService pizzaOrderService = PizzaOrderService.getInstance();
@@ -26,6 +30,9 @@ public class StoreOrderController {
     @FXML
     private Button exportStoreOrdersButton;
 
+    /**
+     * This method initializes the controller
+     */
     @FXML
     public void initialize() {
         initializeOrderNumberComboBox();
@@ -34,6 +41,9 @@ public class StoreOrderController {
         removeOrderButton.setOnAction(event -> removeSelectedOrder());
     }
 
+    /**
+     * This method initializes the order number ComboBox with available order numbers
+     */
     private void initializeOrderNumberComboBox() {
         ObservableList<Integer> orderNumbers = FXCollections.observableArrayList();
         for (Order order : storeOrders.getOrders()) {
@@ -41,6 +51,10 @@ public class StoreOrderController {
         }
         orderNumberComboBox.setItems(orderNumbers);
     }
+
+    /**
+     * This method updates order details based on the selected order number
+     */
     @FXML
     private void updateOrderDetails() {
         Integer selectedOrderNumber = orderNumberComboBox.getValue();
@@ -82,6 +96,11 @@ public class StoreOrderController {
         }
     }
 
+    /**
+     * This method retrieves a formatted string of toppings from a pizza
+     * @param Pizza object "pizza" representing the pizza selected
+     * @return A string representing the toppings of the pizza that are selected
+     */
     private String getToppingsString(Pizza pizza) {
         StringBuilder toppingsString = new StringBuilder();
 
@@ -95,6 +114,10 @@ public class StoreOrderController {
 
         return toppingsString.toString();
     }
+
+    /**
+     * This method removes the selected order from storeOrders
+     */
     @FXML
     private void removeSelectedOrder() {
         Integer selectedOrderNumber = orderNumberComboBox.getValue();
@@ -117,6 +140,10 @@ public class StoreOrderController {
             clearOrderDetails();
         }
     }
+
+    /**
+     * This method exports store orders to a text file
+     */
     @FXML
     private void exportStoreOrders() {
         FileChooser fileChooser = new FileChooser();
@@ -128,10 +155,20 @@ public class StoreOrderController {
         }
         showSuccessAlert();
     }
+
+    /**
+     * This method clears order details from the UI
+     */
     private void clearOrderDetails() {
         orderDetailsListView.setItems(FXCollections.emptyObservableList());
         orderTotalTextField.clear();
     }
+
+    /**
+     * This method displays an alert with the given title and content text
+     * @param String object "title" representing the title of the alert box
+     * @param String object "contentText" representing the alert text
+     */
     private void showAlert(String title, String contentText) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
@@ -140,6 +177,9 @@ public class StoreOrderController {
         alert.showAndWait();
     }
 
+    /**
+     * This method displays a success alert for exporting store orders
+     */
     private void showSuccessAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Store Orders exported");
