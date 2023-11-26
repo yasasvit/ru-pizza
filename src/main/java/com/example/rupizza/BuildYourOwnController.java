@@ -48,7 +48,7 @@ public class BuildYourOwnController {
     @FXML
     private TextField priceTextField;
 
-    /*
+    /**
     * This is the initialization method that is called when the FXML is loaded
     */
     @FXML
@@ -61,14 +61,14 @@ public class BuildYourOwnController {
         placeOrderButton.setOnAction(event -> placeOrder());
     }
 
-    /*
+    /**
     * This method initializes the pizza size combo box
     */
     private void initializeSizeComboBox() {
         ObservableList<String> sizes = FXCollections.observableArrayList("small", "medium", "large");
         sizeComboBox.setItems(sizes);
     }
-    /*
+    /**
     * This method initializes the toppings list view
     */
     private void initializeToppingsListView() {
@@ -77,7 +77,7 @@ public class BuildYourOwnController {
                 "CrabMeats", "GreenPepper", "Onion", "Mushroom", "Pineapple", "BlackOlives");
         additionalToppingsListView.setItems(toppings);
     }
-    /*
+    /**
     * This method is the event handler for adding a topping to the selected toppings list
     */
     @FXML
@@ -101,7 +101,7 @@ public class BuildYourOwnController {
         updatePriceField();
     }
 
-    /*
+    /**
     * This method is the event handler for removing a topping to the selected toppings list
     */
     @FXML
@@ -121,7 +121,7 @@ public class BuildYourOwnController {
         updatePriceField();
     }
 
-    /*
+    /**
     * This method is the event handler for placing the pizza order
     */
     public void placeOrder() {
@@ -154,7 +154,7 @@ public class BuildYourOwnController {
         showSuccessAlert();
     }
 
-    /*
+    /**
     * This method displays a success alert
     */
     private void showSuccessAlert() {
@@ -165,7 +165,7 @@ public class BuildYourOwnController {
         alert.showAndWait();
     }
 
-    /*
+    /**
     * This method displays an error alert with the given content
     * @param String content representing the String to be displayed in the alert box
     */
@@ -177,7 +177,7 @@ public class BuildYourOwnController {
         alert.showAndWait();
     }
     
-    /*
+    /**
     * This method updates the displayed price based on the selected options
     */
     @FXML
