@@ -16,8 +16,8 @@ public class BuildYourOwn extends Pizza {
     }
 
     /**
-    * This method manages the price of the pizza and takes into 
-    * account size changes and optional extras 
+    * This method manages the price of the pizza and accounts for size changes and optional extras 
+    * @return a double which represents the price of optioned pizza
     */
     @Override
     public double price() {
