@@ -3,7 +3,7 @@ package com.example.rupizza;
 import java.util.ArrayList;
 
 /**
-* This class is for building custom pizzas with different sizes, sauces, toppings, and extra options.
+* This class is for building custom pizzas with different sizes, sauces, toppings, and extra options
 * @authors Yasasvi Tallapaneni, Pranav Gummaluri
 */
 public class BuildYourOwn extends Pizza {
