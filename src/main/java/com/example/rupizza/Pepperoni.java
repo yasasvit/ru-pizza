@@ -2,6 +2,10 @@ package com.example.rupizza;
 
 import java.util.ArrayList;
 
+/**
+* This class represents the Pepperoni specialty pizza and its base price
+* @authors Yasasvi Tallapaneni, Pranav Gummaluri
+*/
 public class Pepperoni extends Pizza{
     public Pepperoni(Size size, boolean extraSauce, boolean extraCheese) {
         this.size = size;
@@ -12,6 +16,10 @@ public class Pepperoni extends Pizza{
         this.extraCheese = extraCheese;
     }
 
+    /**
+    * This method represents the Pepperoni's base price and adjusts the price for each addon
+    * @return a doule which represents the price of the optioned pizza
+    */
     @Override
     public double price() {
         double basePrice = 10.99;
